@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+}
+.main {
+  background: linear-gradient(pink, skyblue);
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+}

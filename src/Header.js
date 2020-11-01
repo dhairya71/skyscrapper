@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 function Header() {
+  const [view, setView] = useState([]);
   return (
     <div className="header">
       <img
@@ -11,10 +12,10 @@ function Header() {
 
       <select className="header__drop" defaultValue={"Default"}>
         <option value="Default">Select Position</option>
-        <option value="1">Product Manager</option>
-        <option value="2">Software Developer</option>
-        <option value="3">Front End Developer</option>
-        <option value="4">Back end Developer</option>
+        <option value="1">Germany</option>
+        <option value="2">Brazil</option>
+        <option value="3">USA</option>
+        <option value="4">Singapore</option>
       </select>
 
       <div className="header__buttons">

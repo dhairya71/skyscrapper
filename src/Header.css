@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+}
+.header {
+  top: 0;
+  position: sticky;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e9dddd;
+  align-items: center;
+}
+
+.header__img {
+  max-height: 70px;
+  object-fit: contain;
+  margin-left: 10px;
+}
+
+.header__drop {
+  height: 30px;
+}
+
+.header__buttons {
+  align-items: center;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  min-width: 400px;
+}
+.header__button {
+  height: 30px;
+  border-radius: 5px;
+}
+
+.header__button:hover {
+  color: white;
+  background-color: black;
+}

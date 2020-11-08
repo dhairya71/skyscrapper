@@ -1,7 +1,14 @@
 import React, { useState } from "react";
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+
 import "./Header.css";
+
 function Header() {
-  const [view, setView] = useState([]);
+  const [modal, setModal] = useState(false);
+  function toggle() {
+    setModal(!modal);
+  }
+
   return (
     <div className="header">
       <img
@@ -19,7 +26,20 @@ function Header() {
       </select>
 
       <div className="header__buttons">
-        <button className="header__button">Log in</button>
+        <button className="header__button" onClick={toggle}>
+          Log in
+        </button>
+
+        <Modal isOpen={modal} toggle={toggle} portalClassName={"header__modal"}>
+          <ModalHeader>Hello Modal</ModalHeader>
+          <ModalBody>This is a modal!!!</ModalBody>
+          <ModalFooter>
+            <Button color="danger" onClick={toggle}>
+              Close
+            </Button>
+          </ModalFooter>
+        </Modal>
+
         <button className="header__button">Sign up</button>
         <button className="header__button">About us</button>
         <button className="header__button">Contact us</button>

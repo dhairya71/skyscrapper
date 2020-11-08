@@ -30,11 +30,32 @@ function Header() {
           Log in
         </button>
 
-        <Modal isOpen={modal} toggle={toggle} portalClassName={"header__modal"}>
-          <ModalHeader>Hello Modal</ModalHeader>
-          <ModalBody>This is a modal!!!</ModalBody>
+        <Modal isOpen={modal} toggle={toggle}>
+          <ModalHeader>
+            <img
+              className="modal__img"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQU1cO4UW_qL7Y9IIRia4sAjSpRiA2ypyBGLQ&usqp=CAU"
+              alt="modal image"
+            />
+            Log In
+          </ModalHeader>
+          <ModalBody>
+            <div className="modal__body">
+              <input type="text" placeholder="username" id="user" />
+              <br />
+              <input type="password" placeholder="password" id="password" />
+            </div>
+          </ModalBody>
           <ModalFooter>
-            <Button color="danger" onClick={toggle}>
+            <Button
+              color="primary"
+              onClick={() => {
+                window.location.reload();
+              }}
+            >
+              Log In
+            </Button>
+            <Button color="secondary" onClick={toggle}>
               Close
             </Button>
           </ModalFooter>

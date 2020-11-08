@@ -41,3 +41,11 @@
 .header__modal {
   background-color: purple;
 }
+.modal__img {
+  max-height: 40px;
+  object-fit: contain;
+}
+.modal__body {
+  display: flex;
+  flex-direction: column;
+}

@@ -14,11 +14,11 @@ function App() {
       />
       <Banner
         image="https://i.pinimg.com/originals/76/f2/3e/76f23ef08dc1ebabf4589ca0daa1fc14.jpg"
-        country="Brazil"
+        country="USA"
       />
       <Banner
         image="https://free4kwallpapers.com/uploads/originals/2020/07/19/night-city-k-wallpaper.jpg"
-        country="USA"
+        country="Brazil"
       />
       <Banner
         image="https://www.kolpaper.com/wp-content/uploads/2020/05/Digital-City-Wallpaper.jpg"

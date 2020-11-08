@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import { Modal, Button } from "@material-ui/core";
 
 import "./Header.css";
 
 function Header() {
-  const [modal, setModal] = useState(false);
-  function toggle() {
-    setModal(!modal);
-  }
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="header">
@@ -26,41 +23,20 @@ function Header() {
       </select>
 
       <div className="header__buttons">
-        <button className="header__button" onClick={toggle}>
+        <button className="header__button" onClick={() => setOpen(true)}>
           Log in
         </button>
 
-        <Modal isOpen={modal} toggle={toggle}>
-          <ModalHeader>
-            <img
-              className="modal__img"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQU1cO4UW_qL7Y9IIRia4sAjSpRiA2ypyBGLQ&usqp=CAU"
-              alt="modal image"
-            />
-            Log In
-          </ModalHeader>
-          <ModalBody>
-            <div className="modal__body">
-              <input type="text" placeholder="username" id="user" />
-              <br />
-              <input type="password" placeholder="password" id="password" />
-            </div>
-          </ModalBody>
-          <ModalFooter>
-            <Button
-              color="primary"
-              onClick={() => {
-                window.location.reload();
-              }}
-            >
-              Log In
-            </Button>
-            <Button color="secondary" onClick={toggle}>
-              Close
-            </Button>
-          </ModalFooter>
+        <Modal
+          open={open}
+          onClose={() => {
+            setOpen(!open);
+          }}
+          aria-labelledby="simple-modal-title"
+          aria-describedby="simple-modal-description"
+        >
+          Hello Modal
         </Modal>
-
         <button className="header__button">Sign up</button>
         <button className="header__button">About us</button>
         <button className="header__button">Contact us</button>
